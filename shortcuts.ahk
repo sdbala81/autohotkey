@@ -33,7 +33,7 @@ SetWorkingDir A_InitialWorkingDir
 ^!c:: Run "msedge.exe https://calendar.google.com/calendar/u/0/r/year?pli=1"
 
 #d:: Run "C:\Users\dal\Downloads"                               ; Downloads Folder
-#e:: Run "\\wsl.localhost\Ubuntu-24.04\home\bala\DevEx"                                      ; ElementLogic Folder
+#e:: Run "\\wsl.localhost\Ubuntu-24.04\home\bala\ElementLogic"                                      ; ElementLogic Folder
 +#s:: Run "C:\Bala\Sandbox"                                      ; Sandbox Folder
 +#r:: Run "C:\Bala\Recordings"                                   ; Recordings Folder
 
