@@ -8,6 +8,16 @@
 
     openInChrome := false
 
+    if (target ~= "i)^ahk$") {
+        OpenInVSCode("C:\Bala\.autohotkey")
+        return
+    }
+
+    if (target ~= "i)^ps$") {
+        OpenInVSCode("C:\Users\dal\Documents\PowerShell")
+        return
+    }
+
     if (target ~= "i)^loop$")
         target := "https://loop.cloud.microsoft/"
 
@@ -24,6 +34,26 @@
     } catch as err {
         MsgBox("Could not open: " target "`n`n" err.Message, "Open", "OK Iconx")
     }
+}
+
+OpenInVSCode(path) {
+    localAppData := EnvGet("LOCALAPPDATA")
+
+    candidates := [
+        localAppData '\Programs\Microsoft VS Code\Code.exe',
+        localAppData '\Programs\Microsoft VS Code Insiders\Code - Insiders.exe',
+        A_ProgramFiles '\Microsoft VS Code\Code.exe',
+        A_ProgramFiles '\Microsoft VS Code Insiders\Code - Insiders.exe'
+    ]
+
+    for exePath in candidates {
+        if FileExist(exePath) {
+            Run('"' exePath '" --new-window "' path '"')
+            return
+        }
+    }
+
+    Run('"' A_ComSpec '" /c code --new-window "' path '"')
 }
 
 AskOpenTarget() {

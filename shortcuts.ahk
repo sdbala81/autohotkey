@@ -5,6 +5,7 @@
 ; -------------------------------------------------------------------------
 
 #Requires AutoHotkey v2.0
+#SingleInstance Force
 SetWorkingDir A_InitialWorkingDir
 
 ; --- Learning & Web (<Alt><Shift>) ---
@@ -26,6 +27,7 @@ SetWorkingDir A_InitialWorkingDir
 !+s:: Run "slack://open"                                ; [Alt+Shift+S] Slack Protocol
 
 #w:: Run "firefox.exe https://gemini.google.com/"       ; [Win+W] Gemini in Firefox
+#z:: Run "firefox.exe https://claude.ai/projects"       ; [Win+Z] Claude Projects
 
 ; --- Specialized Browser Combinations ---
 
