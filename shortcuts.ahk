@@ -40,8 +40,9 @@ SetWorkingDir A_InitialWorkingDir
 #e:: Run "C:\ElementLogic"                                      ; [Win+E] ElementLogic Folder
 #g:: Run "G:\"                                                  ; [Win+G] G:\ Drive
 #s:: Run "C:\Bala\Sandbox"                                      ; [Win+S] Sandbox Folder
-#b:: Run "C:\Bala\e-Books"                                         ; [Win+B] Books Folder
-+#r:: Run "C:\Bala\Recordings"                                   ; [Win+Shift+R] Recordings Folder
+#b:: Run "C:\Bala\e-Books"                                      ; [Win+B] Books Folder
++#r:: Run "C:\Bala\Recordings"                                  ; [Win+Shift+R] Recordings Folder
+!+d:: Run "C:\Users\dal\OneDrive\e-Books"                       ; [Alt+Shift+K] OneDrive e-Books Folder
 
 ; --- Open selected folder in VSCode (new window) ---
 #c:: OpenVsCode() ; [Win+C] Open focused Explorer item in VSCode (new window)
