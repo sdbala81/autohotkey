@@ -21,6 +21,9 @@
     if (target ~= "i)^loop$")
         target := "https://loop.cloud.microsoft/"
 
+    if (target ~= "i)^github$")
+        target := "https://github.com/sdbala81?tab=repositories"
+
     if (target ~= "i)^pw$") {
         target := "https://docs.google.com/document/d/1BLvtrMcRMd03_lFJB-kxsv6x0DRKXBBvrfPzLoVwU_Y/edit?tab=t.0"
         openInChrome := true
