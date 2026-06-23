@@ -36,6 +36,18 @@ SetWorkingDir A_InitialWorkingDir
 ^!m:: Run "msedge.exe https://www.google.lk/maps"                      ; [Ctrl+Alt+M] Google Maps
 ^!c:: Run "msedge.exe https://calendar.google.com/calendar/u/0/r/year?pli=1"  ; [Ctrl+Alt+C] Google Calendar (Year View)
 
+; Press Alt + Shift + W to open or bring WhatsApp to the foreground
+!+w::
+{
+    if WinExist("ahk_exe WhatsApp.exe") {
+        WinActivate("ahk_exe WhatsApp.exe")
+    }
+    else {
+        ; Forces Windows to launch/unhide the UWP application protocol
+        Run("whatsapp:")
+    }
+}
+
 #d:: Run "C:\Users\dal\Downloads"                               ; [Win+D] Downloads Folder
 #e:: Run "C:\ElementLogic"                                      ; [Win+E] ElementLogic Folder
 #g:: Run "G:\"                                                  ; [Win+G] G:\ Drive
