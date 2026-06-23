@@ -14,7 +14,10 @@
     }
 
     if (target ~= "i)^ps$") {
-        OpenInVSCode("C:\Users\dal\Documents\PowerShell")
+        OpenInVSCode([
+            "C:\Users\dal\Documents\PowerShell",
+            "C:\PowerShell"
+        ])
         return
     }
 
@@ -48,7 +51,24 @@
     }
 }
 
-OpenInVSCode(path) {
+OpenInVSCode(paths) {
+    if !IsObject(paths)
+        paths := [paths]
+
+    normalizedPaths := []
+    for path in paths {
+        path := Trim(path)
+        if (path != "")
+            normalizedPaths.Push(path)
+    }
+
+    if (normalizedPaths.Length = 0)
+        return
+
+    args := "--new-window"
+    for path in normalizedPaths
+        args .= ' "' path '"'
+
     localAppData := EnvGet("LOCALAPPDATA")
 
     candidates := [
@@ -60,12 +80,12 @@ OpenInVSCode(path) {
 
     for exePath in candidates {
         if FileExist(exePath) {
-            Run('"' exePath '" --new-window "' path '"')
+            Run('"' exePath '" ' args)
             return
         }
     }
 
-    Run('"' A_ComSpec '" /c code --new-window "' path '"')
+    Run('"' A_ComSpec '" /c code ' args)
 }
 
 AskOpenTarget() {
