@@ -29,6 +29,15 @@
         openInChrome := true
     }
 
+    if (target ~= "i)^gmail$") {
+        target := "https://mail.google.com/"
+        openInChrome := true
+    }
+
+    if (target ~= "i)^drive$") {
+        target := "https://drive.google.com/"
+    }
+
     try {
         if (openInChrome)
             Run('chrome.exe "' target '"')

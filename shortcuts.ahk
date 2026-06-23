@@ -26,8 +26,8 @@ SetWorkingDir A_InitialWorkingDir
 !+r:: Run "msedge.exe https://app.raindrop.io/my/0"                    ; [Alt+Shift+R] Raindrop Bookmarks
 !+s:: Run "slack://open"                                ; [Alt+Shift+S] Slack Protocol
 
-#w:: Run "firefox.exe https://gemini.google.com/"       ; [Win+W] Gemini in Firefox
-#z:: Run "firefox.exe https://claude.ai/projects"       ; [Win+Z] Claude Projects
+#w:: Run "shell:AppsFolder\50bd8ba7-f030-4295-8e11-9dc6407431d4"  ; [Win+W] Google Gemini Desktop App
+#z:: Run "claude://"                                    ; [Win+Z] Claude Desktop App
 
 ; --- Specialized Browser Combinations ---
 
