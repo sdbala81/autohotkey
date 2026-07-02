@@ -12,21 +12,19 @@ SetWorkingDir A_InitialWorkingDir
 
 !+1:: Run "msedge.exe https://app.pluralsight.com/library/"    ; [Alt+Shift+1] Pluralsight
 !+2:: Run "msedge.exe https://www.linkedin.com/learning/"       ; [Alt+Shift+2] LinkedIn Learning
-!+b:: Run "msedge.exe --new-window https://www.inoreader.com/starred"  ; [Alt+Shift+B] Inoreader Starred
-!+t:: Run "msedge.exe https://twitter.com/home"                          ; [Alt+Shift+T] Twitter / X
 !+4:: Run "msedge.exe https://z-library.sk/"                           ; [Alt+Shift+4] Z-Library
-!+5:: Run "msedge.exe https://web.whatsapp.com/"         ; [Alt+Shift+5] WhatsApp Web
+
 !+y:: Run "msedge.exe https://www.youtube.com/feed/subscriptions"     ; [Alt+Shift+Y] YouTube Subscriptions
 !+o:: Run "msedge.exe https://learning.oreilly.com/home/"              ; [Alt+Shift+O] O'Reilly Learning
 !+e:: Run "msedge.exe https://learning.oreilly.com/live-events/?page=1"  ; [Alt+Shift+E] O'Reilly Live Events
-!+a:: Run "firefox.exe https://claude.ai/ https://gemini.google.com/app"  ; [Alt+Shift+A] Claude + Gemini
+
 !+k:: Run "msedge.exe https://www.amazon.co.uk"                        ; [Alt+Shift+K] Amazon UK
 !+f:: Run "https://fast.com/"                                           ; [Alt+Shift+F] Fast.com Speed Test
 !+i:: Run "msedge.exe https://www.google.com/intl/ta/inputtools/try/"  ; [Alt+Shift+I] Google Input Tools (Tamil)
 !+r:: Run "msedge.exe https://app.raindrop.io/my/0"                    ; [Alt+Shift+R] Raindrop Bookmarks
 !+s:: Run "slack://open"                                ; [Alt+Shift+S] Slack Protocol
 
-#w:: Run "shell:AppsFolder\50bd8ba7-f030-4295-8e11-9dc6407431d4"  ; [Win+W] Google Gemini Desktop App
+#w:: Run "firefox.exe https://gemini.google.com/app"  ; [Win+W] Google Gemini Desktop App
 #z:: Run "claude://"                                    ; [Win+Z] Claude Desktop App
 
 ; --- Specialized Browser Combinations ---
@@ -52,9 +50,9 @@ SetWorkingDir A_InitialWorkingDir
 #e:: Run "C:\ElementLogic"                                      ; [Win+E] ElementLogic Folder
 #g:: Run "G:\"                                                  ; [Win+G] G:\ Drive
 #s:: Run "C:\Bala\Sandbox"                                      ; [Win+S] Sandbox Folder
-#b:: Run "C:\Bala\e-Books"                                      ; [Win+B] Books Folder
+#b:: Run "C:\Users\dal\OneDrive\e-Books"                                      ; [Win+B] Books Folder
 +#r:: Run "C:\Bala\Recordings"                                  ; [Win+Shift+R] Recordings Folder
-!+d:: Run "C:\Users\dal\OneDrive\e-Books"                       ; [Alt+Shift+K] OneDrive e-Books Folder
+!+d:: Run "C:\Users\dal\OneDrive"                       ; [Alt+Shift+K] OneDrive e-Books Folder
 
 ; --- Open selected folder in VSCode (new window) ---
 #c:: OpenVsCode() ; [Win+C] Open focused Explorer item in VSCode (new window)
